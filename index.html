@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="relative m-0 p-0 box-border ">
+
+    <!-- nav creation -->
+    <nav class="absolute w-lvw flex justify-between px-10 py-4 text-lg ">
+        <!-- logo -->
+        <div class="logo font-extrabold">
+            <img class = "h-10 w-10 " src="./images/logo.svg" alt="">              
+        </div>
+        <!-- nav elements -->
+        <ul class="flex justify-between items-center font-medium text-white">
+            <li class="px-5 ">
+                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="#">Home</a>
+            </li>
+            <li class="px-5">
+                <a class= "border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="#">About</a>
+            </li>
+            <li class="px-5">
+                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="#">Services</a>
+            </li>
+            <li class="px-5">
+                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="">Contact us</a>
+            </li>
+
+            <!-- login/signup -->
+            <div class="signup pl-10">
+                <a href="./Login Page/login.html"><button class="relative border-2 rounded-2xl border-cyan-300 px-5 py-1 text-cyan-300 hover:bg-cyan-300 hover:text-blue-700 transition-all duration-150 ease-in">Login</button></a>
+            </div>
+        </ul>
+    </nav>
+
+
+    <!-- hero section -->
+    <section class="hero h-lvh bg-gradient-to-r from-black to-blue-900 flex justify-between px-24 overflow-hidden" >
+        <div class="relative txt w-2/4 top-56 left-28">
+            <p class="text-white font-extrabold text-3xl ">Unlock Seamless Transactions</p>
+            <p class="text-cyan-300 pb-10 uppercase font-extrabold text-7xl hover:text-rose-400 transition-all duration-150 ease-in">Welcome to SwiftPay</p>
+            <p class="text-white pb-12 w-9/12" >where speed meets security. Lightning-fast payments, ironclad protection – experience the future of effortless transactions. Simplify, Secure, Succeed!</p>
+            <div class="signup">
+                <a href=""><button class="relative font-medium border-2 rounded-2xl border-cyan-300 px-6 py-3 text-cyan-300 hover:bg-cyan-300 hover:text-blue-700 transition-all duration-150 ease-in">Learn more</button></a>
+            </div>
+        </div>
+        <div class="image overflow-hidden">
+            <img class="absolute top-40 right-48 animate-bounce"  src="./images/main.svg" alt="">
+            <img class="absolute bottom-24 right-48 animate-pulse" src="./images/lightining.svg" alt="">
+            <img class="absolute bottom-12 right-48 animate-pulse" src="./images/platform.svg" alt="">
+        </div>
+        
+    </section>
+</body>
+
+</html>
