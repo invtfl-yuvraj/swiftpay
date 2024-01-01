@@ -1,0 +1,244 @@
+// creating variables 
+$theme-color: #45f5f2;
+$bg-color: #1d1c1c;
+$ph-fp-color: #c8c8c8;
+$border-color: #585858;
+$text-color: #2a2a2a;
+$error-color : red;
+
+
+// importing google font - poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background : linear-gradient(to right, black, #1e3a8a);
+
+    .container {
+        position: relative;
+        background: transparent;
+        backdrop-filter: blur(1rem);
+        height: 26.5rem;
+        width: 23.5rem;
+        border-radius: 8px;
+        overflow: hidden;
+
+        @media (max-width : 480px) {
+            width: 80vw;
+        }
+
+        &::before {
+            content: "";
+            z-index: 1;
+            position: absolute;
+            left: -50%;
+            top: -50%;
+            height: 420px;
+            width: 380px;
+            border-radius: 1rem;
+            transform-origin: bottom right;
+            background: linear-gradient(0deg, transparent, $theme-color, $theme-color);
+            animation: animate 6s linear infinite;
+
+        }
+
+        &::after {
+            content: "";
+            z-index: 1;
+            position: absolute;
+            left: -50%;
+            top: -50%;
+            height: 28rem;
+            width: 23rem;
+            border-radius: 1rem;
+            transform-origin: bottom right;
+            background: linear-gradient(0deg, transparent, $theme-color, $theme-color);
+            animation: animate 6s linear infinite;
+            animation-delay: -3s;
+
+        }
+
+        
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+form {
+    position: absolute;
+    inset: 2px;
+    background : linear-gradient(to right, black, #1e3a8a);
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        color: $theme-color;
+        letter-spacing: 0.1rem;
+        text-align: center;
+    }
+
+    @media (max-width : 480px) {
+
+        padding : 3em 2em
+    }
+}
+
+.input_box {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+
+    @media (max-width : 480px) {
+        width: 63vw;
+    }
+
+
+
+    input {
+        position: relative;
+        width: 100%;
+        padding: 2px 10px 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $text-color;
+        font-size: 1rem;
+        transition: 0.1s;
+        z-index: 10;
+    }
+
+    span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0 5px;
+        font-size: 1rem;
+        pointer-events: none;
+        letter-spacing: 0.05rem;
+        transition: 0.4s;
+        color: $ph-fp-color;
+
+    }
+
+    input {
+        &:valid~span {
+            color: $theme-color;
+            transform: translateX(0px) translateY(-34px);
+            font-size: 0.75rem;
+        }
+
+        &:focus~span {
+            color: $theme-color;
+            transform: translateX(0px) translateY(-34px);
+            font-size: 0.75rem;
+        }
+
+    }
+
+    .being-typed{
+        // position: relative;
+        height:42px;
+
+        // z-index: 10;
+    
+    }
+
+    i {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: $theme-color;
+        border-radius: 4px;
+        pointer-events: none;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 9;
+    }
+
+    input {
+
+        &:valid~i,
+        &:focus~i {
+            height: 42px;
+        }
+    }
+
+
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        margin: 10px 0;
+        font-size: 0.75rem;
+        color: $ph-fp-color;
+        text-decoration: beige;
+
+        &:hover,
+        &:nth-child(2) {
+            color: $theme-color;
+        }
+    }
+}
+
+
+.login {
+    border: none;
+    outline: none;
+    padding: 11px 25px;
+    background: $theme-color;
+    cursor: pointer;
+    border-radius: 1rem;
+    width: 100px;
+    font-weight: 600;
+    margin-top: 10px;
+
+    @media (max-width : 480px) {
+        width: 63vw;
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+.error-message {
+    color: $error-color;
+    font-size: 0.75rem;
+    display: none;  /* Initially hide the error message */
+    animation: jitter 0.2s ease-in-out infinite;
+}
+
+@keyframes jitter {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(2px); }
+}
