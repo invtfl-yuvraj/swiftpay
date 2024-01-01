@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./sass/style.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <form autocomplete="off">
+            <h2>Sign in</h2>
+            <div class="input_box">
+                <input type="email" id="email" required="required">
+                <span  >Email</span>
+                <i id ="typing-box" ></i>
+            </div>
+            <span id="emailError" class="error-message">Invalid email address</span>
+            <div class="input_box">
+                <input type="password" id="password" required disabled>
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forget Password ?</a>
+                <a href="#">Sign Up</a>
+            </div>
+            <input type="submit" value="login" class="login" id="valid-login">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
