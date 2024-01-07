@@ -14,49 +14,72 @@
     <!-- nav creation -->
     <nav class="absolute w-lvw flex justify-between px-10 py-4 text-lg ">
         <!-- logo -->
-        <div class="logo font-extrabold">
-            <img class = "h-10 w-10 " src="./images/logo.svg" alt="">              
+        <div class="logo">
+            <img class="h-10 w-10 " src="./images/logo.svg" alt="">
         </div>
         <!-- nav elements -->
-        <ul class="flex justify-between items-center font-medium text-white">
+        <ul class="flex justify-between items-center font-medium text-white max-[680px]:hidden">
             <li class="px-5 ">
-                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="#">Home</a>
+                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in"
+                    href="#">Home</a>
             </li>
             <li class="px-5">
-                <a class= "border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="#">About</a>
+                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in"
+                    href="#">About</a>
             </li>
             <li class="px-5">
-                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="#">Services</a>
+                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in"
+                    href="#">Services</a>
             </li>
             <li class="px-5">
-                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in" href="">Contact us</a>
+                <a class="border-b-2 border-b-cyan-300 border-opacity-0 hover:border-opacity-100 hover:pb-2 hover:text-cyan-300 transition-all duration-150 ease-in"
+                    href="">Contact us</a>
             </li>
 
             <!-- login/signup -->
             <div class="signup pl-10">
-                <a href="./Login Page/login.html"><button class="relative border-2 rounded-2xl border-cyan-300 px-5 py-1 text-cyan-300 hover:bg-cyan-300 hover:text-blue-700 transition-all duration-150 ease-in">Login</button></a>
+                <a href="./Login Page/login.html"><button
+                        class="relative border-2 rounded-2xl border-cyan-300 px-5 py-1 text-cyan-300 hover:bg-cyan-300 hover:text-blue-700 transition-all duration-150 ease-in">Login</button></a>
             </div>
+
+            <!-- Hamburger creation -->
+
         </ul>
+        <input class="min-[680px]:hidden max-[680px]:invisible" type="checkbox" id="check">
+        <label for="check" class="hamburger min-[680px]:hidden h-10 w-10 flex justify-center items-center hover:first:bg-transparent group">
+            <div
+                class="bar relative h-1 w-full bg-cyan-300 rounded-lg  before:absolute before:content-[''] before:h-full before:w-full before:bg-cyan-300 before:rounded-lg before:-translate-y-3 after:absolute after:content-[''] after:h-full after:w-full after:bg-cyan-300 after:rounded-lg after:translate-y-3 
+            before:transition-all before:duration-250  after:transition-all after:duration-250 group-hover:bg-transparent group-hover:before:rotate-45 group-hover:before:w-4/5 group-hover:before:-translate-y-1 group-hover:before:left-1 group-hover:before:top-1 group-hover:after:-rotate-45 group-hover:after:w-4/5 group-hover:after:translate-y-1 group-hover:after:right-1 group-hover:after:bottom-1">
+            </div>
+        </label>
+
     </nav>
 
 
     <!-- hero section -->
-    <section class="hero h-lvh bg-gradient-to-r from-black to-blue-900 flex justify-between px-24 overflow-hidden " >
+    <section class="hero h-lvh bg-gradient-to-r from-black to-blue-900 flex justify-between px-24 overflow-hidden ">
         <div class="relative w-2/4 top-56 left-28 max-[1350px]:left-16 ">
             <p class="text-white font-extrabold text-3xl max-[1350px]:text-2xl">Unlock Seamless Transactions</p>
-            <p class="text-cyan-300 pb-10 uppercase font-extrabold text-7xl max-[1350px]:text-5xl hover:text-rose-400 transition-all duration-150 ease-in">Welcome to SwiftPay</p>
-            <p class="text-white pb-12 w-9/12" >where speed meets security. Lightning-fast payments, ironclad protection – experience the future of effortless transactions. Simplify, Secure, Succeed!</p>
+            <p
+                class="text-cyan-300 pb-10 uppercase font-extrabold text-7xl max-[1350px]:text-5xl hover:text-rose-400 transition-all duration-150 ease-in">
+                Welcome to SwiftPay</p>
+            <p class="text-white pb-12 w-9/12">where speed meets security. Lightning-fast payments, ironclad protection – experience the
+                future of effortless transactions. Simplify, Secure, Succeed!</p>
             <div class="signup">
-                <a href=""><button class="relative font-medium border-2 rounded-2xl border-cyan-300 px-6 py-3 text-cyan-300 hover:bg-cyan-300 hover:text-blue-700 transition-all duration-150 ease-in">Learn more</button></a>
+                <a href=""><button
+                        class="relative font-medium border-2 rounded-2xl border-cyan-300 px-6 py-3 text-cyan-300 hover:bg-cyan-300 hover:text-blue-700 transition-all duration-150 ease-in">Learn
+                        more</button></a>
             </div>
         </div>
         <div class="image overflow-hidden">
             <img class="absolute top-40 right-48 max-[1350px]:right-28 
-            max-[1350px]:w-96 max-[1350px]:top-52 animate-bounce"  src="./images/main-bg.png" alt="">
-            <img class="absolute bottom-24 right-48 max-[1350px]:right-28 max-[1350px]:w-96 max-[1350px]:bottom-36 animate-pulse" src="./images/light.png" alt="">
-            <img class="absolute bottom-12 right-48 max-[1350px]:right-28 max-[1350px]:w-96 max-[1350px]:bottom-32 animate-pulse" src="./images/platform.png" alt="">
+            max-[1350px]:w-96 max-[1350px]:top-52 animate-bounce" src="./images/main-bg.png" alt="">
+            <img class="absolute bottom-24 right-48 max-[1350px]:right-28 max-[1350px]:w-96 max-[1350px]:bottom-36 animate-pulse"
+                src="./images/light.png" alt="">
+            <img class="absolute bottom-12 right-48 max-[1350px]:right-28 max-[1350px]:w-96 max-[1350px]:bottom-32 animate-pulse"
+                src="./images/platform.png" alt="">
         </div>
-        
+
     </section>
 </body>
 
