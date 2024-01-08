@@ -9,6 +9,9 @@ module.exports = {
       transitionDuration: {
         '250': '250ms',
       },
+      height: {
+        'screen2x' : '120vh',
+      },
 
     },
   },
