@@ -17,7 +17,7 @@ Welcome to SwiftPay, where speed meets security for seamless transactions.
 SwiftPay is a web application designed to provide lightning-fast payments with ironclad security. This project includes a responsive and visually appealing user interface built with HTML and styled using Tailwind CSS. The hero section features animations to enhance the user experience.
 
 ## Preview
-You can see a live preview here : [updated soon...]
+You can see a live preview here : https://swiftpay-landing-page.vercel.app/
 
 ## Features
 
